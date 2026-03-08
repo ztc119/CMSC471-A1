@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        
+        #layout { display: flex; gap: 30px; align-items: flex-start; }
+        
+        #controls { 
+            flex: 0 0 200px; 
+            padding: 15px; 
+            background: #f9f9f9; 
+            border-radius: 8px; 
+            border: 1px solid #eee;
+        }
+        
+        #controls h3 { font-size: 1rem; margin-top: 0; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+        .filter-option { margin-bottom: 8px; font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; }
+        .filter-option input { margin-right: 10px; }
+
+        h1 { font-weight: 300; margin-bottom: 10px; }
+        .subtitle { color: #666; margin-bottom: 30px; font-style: italic; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Chicago Crime Trends</h1>
+
+        <div id="layout">
+            <div id="controls">
+                <h3>Filter Crimes</h3>
+                </div>
+
+            <div id="vis-container">
+                <div id="vis"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Load D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
