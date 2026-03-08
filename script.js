@@ -41,7 +41,7 @@ const hoverLine = svg.append("line")
 
 function init(){
     // Load data
-    d3.csv("./data/crime_monthly_stats.csv", function(d){
+    d3.csv("./crime_monthly_stats.csv", function(d){
 
       return {
         crime: d.crime_type,
