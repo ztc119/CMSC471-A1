@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CMSC471 A1: Chicago Crime Visualization Project</title>
+<link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="#writeup">Project Overview</a></li>
+    <li><a href="#vis1">Visualization 1</a></li>
+    <li><a href="#vis2">Visualization 2</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+
+<!-- WRITEUP -->
+<section id="writeup">
+<h1>Chicago Crime Visualization Project</h1>
+
+<p>
+Insert your long write-up here describing the dataset
+</p>
+
+<p>
+Explain your design choices, the interaction techniques used, and the reasoning
+behind your visual encodings.
+</p>
+
+<p>
+Include your development process, time spent, references, and any AI usage here.
+</p>
+
+</section>
+
+<!-- VISUALIZATION 1 -->
+<section id="vis1">
+
+<h2>Visualization 1: Monthly Crime Counts by Crime Type</h2>
+
+<button class="info-toggle">About this visualization</button>
+
+<div class="info-box">
+<p>
+This visualization shows average monthly crime statistics for three crime types:
+theft, robbery, and burglary, for incidents reported across the years 2015-2025 in Chicago.
+Filter crime types using a dropdown menu and hover over points to view
+details about the average, highest, and lowest crime years.
+</p>
+</div>
+
+<iframe src="vis-z/index.html"></iframe>
+
+</section>
+
+<!-- VISUALIZATION 2 -->
+<section id="vis2">
+
+<h2>Visualization 2: Crime Summary</h2>
+
+<button class="info-toggle">About this visualization</button>
+
+<div class="info-box">
+<p>
+This visualization explores crime trends in the two years before,
+one year during the height of, and two years after the COVID-19
+pandemic.
+</p>
+</div>
+
+<iframe src="vis-e/index.html"></iframe>
+
+</section>
+
+</div>
+
+<script>
+
+const toggles = document.querySelectorAll(".info-toggle");
+
+toggles.forEach(button => {
+  button.addEventListener("click", () => {
+    const box = button.nextElementSibling;
+    box.classList.toggle("open");
+  });
+});
+
+</script>
+
+</body>
+</html>
