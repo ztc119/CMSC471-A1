@@ -16,6 +16,7 @@
     display: flex;
     gap: 30px;
     align-items: flex-start;
+    width:100%;
 }
 
 /* Style the axes */
