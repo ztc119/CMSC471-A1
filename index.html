@@ -24,34 +24,34 @@
 <h1>Chicago Crime Visualization Project</h1>
 
 <p>
-  <github-md>## Write-up<github-md>
+  <h2>Write-up</h2>
   
-  ### **Introduction**
-  In this assignment, we used the Chicago Crimes (2001–present) dataset, which contains data on the reported incidents of crime (excluding murders) that occurred in Chicago from 2001 to the present; the dataset does not cover the most recent seven days, and the data was extracted from the Chicago Police Department’s Citizen Law Enforcement Analysis and Reporting (CLEAR) system. We chose this dataset to explore trends in Chicago crime data; after skimming through the visualizations on the data portal, we found that there were lots of questions we could explore using the data that was available, and we found that the existing visualizations could help guide us towards meaningful conclusions. For example, after learning that theft was the most commonly reported primary crime, we initially decided to narrow our focus to thefts in particular. In addition, after noticing a sharp decrease in reported crimes during COVID-19 quarantine (a notably sharp decrease even within the context of the general downward trend in the number of reported crimes since 2001), and the eventual increase beginning in 2021, we thought it might be illuminating to explore trends over the years in crime, especially with regards to changes before, during, and after quarantine.
+  <h3><b>Introduction</b></h3>
+  <p>In this assignment, we used the Chicago Crimes (2001–present) dataset, which contains data on the reported incidents of crime (excluding murders) that occurred in Chicago from 2001 to the present; the dataset does not cover the most recent seven days, and the data was extracted from the Chicago Police Department’s Citizen Law Enforcement Analysis and Reporting (CLEAR) system. We chose this dataset to explore trends in Chicago crime data; after skimming through the visualizations on the data portal, we found that there were lots of questions we could explore using the data that was available, and we found that the existing visualizations could help guide us towards meaningful conclusions. For example, after learning that theft was the most commonly reported primary crime, we initially decided to narrow our focus to thefts in particular. In addition, after noticing a sharp decrease in reported crimes during COVID-19 quarantine (a notably sharp decrease even within the context of the general downward trend in the number of reported crimes since 2001), and the eventual increase beginning in 2021, we thought it might be illuminating to explore trends over the years in crime, especially with regards to changes before, during, and after quarantine.</p>
   
-  ---
+  <hr>
   
-  ### **Monthly Crime Counts by Crime Type**
-  The visualization “Monthly Crime Counts by Crime Type” uses a subset of the Chicago Crimes data. The goal of this visualization is to represent information on seasonal trends in the number of reported crimes of a selected type. Since the original dataset is extremely large (with over 8 million entries), a subset was chosen to improve efficiency. The chosen subset contains data on three types of crime: theft, robbery, and burglary; these three types of crime are frequent enough that the subset can still reveal meaningful insights, and they are understandable by a general audience. Additionally, the subset was restricted to data from 2015-2025 as those years are more recent.
+  <h3><b>Monthly Crime Counts by Crime Type</b></h3>
+  <p>The visualization “Monthly Crime Counts by Crime Type” uses a subset of the Chicago Crimes data. The goal of this visualization is to represent information on seasonal trends in the number of reported crimes of a selected type. Since the original dataset is extremely large (with over 8 million entries), a subset was chosen to improve efficiency. The chosen subset contains data on three types of crime: theft, robbery, and burglary; these three types of crime are frequent enough that the subset can still reveal meaningful insights, and they are understandable by a general audience. Additionally, the subset was restricted to data from 2015-2025 as those years are more recent.<br><br>
+  The independent variable is the month of the year and the dependent variable is the number of incidents over 2015-2025 of a type of crime in a month. The subset was also preprocessed before use to calculate the average incident counts per month, as well as the maximum and minimum counts and the years in which they occurred.</p>
   
-  The independent variable is the month of the year and the dependent variable is the number of incidents over 2015-2025 of a type of crime in a month. The subset was also preprocessed before use to calculate the average incident counts per month, as well as the maximum and minimum counts and the years in which they occurred.
-  
-  #### **Rationale for design**
-  <u>Line chart</u>: It was chosen because the visualization focuses on temporal patterns in the data.
-  <u>Individual datapoints</u>: Datapoints are used to represent the maximum, average, and minimum monthly crime counts to give users a better visual representation of the quantity of incidents (including historic extremes) and to serve as an accessible tooltip target.
-  <u>Color encoding</u>: This was used to visually separate what the different elements of the chart represent. Red represents the maximum, green the minimum, and black the average monthly crime count. This color scheme was chosen because it is intuitive.
-  <u>Dropdown button</u>: It allows the user to dynamically filter the data displayed by the type of crime. This was done instead of showing all types at once to improve readability and prevent overcrowding in the visualization.
-  <u>Tooltip</u>: When the user hovers over a datapoint, the tooltip shows the month, crime count, and the year if it is a maximum/minimum point. This allows the user to see details about the precise numerical values without overcrowding the visualization.
-  <u>Highlight on hover</u>: When the user hovers over a datapoint, the point increases in size and becomes semi-transparent, thus distinguishing the selected point. This provides visual feedback to the user as they examine the visualization.
-  <u>Reference line on hover</u>: When the user hovers over a datapoint, a reference line appears to connect the datapoint to the $y$-axis. This helps the user estimate the value of the point relative to scale.
-  <u>Animated transitions</u>: These were added to provide the user with a smooth viewing experience.
-  
-  
-  #### **Alternatives**
-  <u>Not showing the month on the tooltip</u>: Since the month is shown on the $x$-axis, including the month in the tooltip was not strictly necessary. However, since some of the datapoints are very far from the $x$-axis, it was more convenient to check the month by using the tooltip than by comparing the datapoint’s position to the $x$-axis.
+  <h4><b>Rationale for design</b></h4>
+  <ul>
+  <li><u>Line chart</u>: It was chosen because the visualization focuses on temporal patterns in the data.</li>
+  <li><u>Individual datapoints</u>: Datapoints are used to represent the maximum, average, and minimum monthly crime counts to give users a better visual representation of the quantity of incidents (including historic extremes) and to serve as an accessible tooltip target.</li>
+  <li><u>Color encoding</u>: This was used to visually separate what the different elements of the chart represent. Red represents the maximum, green the minimum, and black the average monthly crime count. This color scheme was chosen because it is intuitive.</li>
+  <li><u>Dropdown button</u>: It allows the user to dynamically filter the data displayed by the type of crime. This was done instead of showing all types at once to improve readability and prevent overcrowding in the visualization.</li>
+  <li><u>Tooltip</u>: When the user hovers over a datapoint, the tooltip shows the month, crime count, and the year if it is a maximum/minimum point. This allows the user to see details about the precise numerical values without overcrowding the visualization.</li>
+  <li><u>Highlight on hover</u>: When the user hovers over a datapoint, the point increases in size and becomes semi-transparent, thus distinguishing the selected point. This provides visual feedback to the user as they examine the visualization.</li>
+  <li><u>Reference line on hover</u>: When the user hovers over a datapoint, a reference line appears to connect the datapoint to the $y$-axis. This helps the user estimate the value of the point relative to scale.</li>
+  <li><u>Animated transitions</u>: These were added to provide the user with a smooth viewing experience.</li>
+  </ul>
   
   
-  ---
+  <h4><b>Alternatives</b></h4>
+  <ul><li><u>Not showing the month on the tooltip</u>: Since the month is shown on the $x$-axis, including the month in the tooltip was not strictly necessary. However, since some of the datapoints are very far from the $x$-axis, it was more convenient to check the month by using the tooltip than by comparing the datapoint’s position to the $x$-axis.</li></ul>
+  
+  <hr>
   
   ### **Crime Trends Before, During, and After the COVID-19 Pandemic**
   
