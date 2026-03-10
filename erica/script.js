@@ -6,7 +6,8 @@ const svg = d3.select('#vis')
     .append('svg')
     .attr('viewBox', `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
     .attr('width', '100%')          // Makes it scale horizontally
-    .attr('height', 'auto')         // Optional, ensures proportional scaling
+    .attr('height', '100%')         // Optional, ensures proportional scaling
+    .attr('preserveAspectRatio', 'xMidYMid meet') // scales while keeping aspect ratio
     .append('g')
     .attr('transform', `translate(${margin.left},${margin.top})`);
 
