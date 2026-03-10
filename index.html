@@ -6,6 +6,19 @@
 <link rel="stylesheet" href="main.css">
 </head>
 
+<script>
+window.addEventListener("load", () => {
+  const iframes = document.querySelectorAll(".vis-frame");
+
+  iframes.forEach(frame => {
+    frame.onload = () => {
+      const body = frame.contentWindow.document.body;
+      frame.style.height = body.scrollHeight + "px";
+    };
+  });
+});
+</script>
+  
 <body>
 
 <!-- Navigation -->
