@@ -34,6 +34,12 @@ nav a{
     font-weight:bold;
 }
 
+nav ul li a:hover {
+    color: #f39c12;        /* Highlight color */
+    text-decoration: underline; /* Optional: underline on hover */
+    transition: color 0.3s;     /* Smooth color transition */
+}
+
 /* Sections */
 
 section{
