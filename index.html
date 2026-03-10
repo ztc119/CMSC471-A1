@@ -1,129 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMSC471 A1: Chicago Crime Visualization Project</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="main.css">
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; line-height: 1.6; }
-        .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
-        
-        #layout { display: flex; gap: 30px; align-items: flex-start; }
-        
-        #controls { 
-            flex: 0 0 200px; 
-            padding: 15px; 
-            background: #f9f9f9; 
-            border-radius: 8px; 
-            border: 1px solid #eee;
-        }
-        
-        #controls h3 { font-size: 1rem; margin-top: 0; border-bottom: 1px solid #ddd; padding-bottom: 5px; }
-        .filter-option { margin-bottom: 8px; font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; }
-        .filter-option input { margin-right: 10px; }
-
-        h1 { font-weight: 300; margin-bottom: 10px; }
-        .subtitle { color: #666; margin-bottom: 30px; font-style: italic; }
-    </style>
+<meta charset="UTF-8">
+<title>CMSC471 A1: Chicago Crime Visualization Project</title>
+<link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav>
-      <ul>
-        <li><a href="#writeup">Project Overview</a></li>
-        <li><a href="#vis1">Visualization 1</a></li>
-        <li><a href="#vis2">Visualization 2</a></li>
-      </ul>
-    </nav>
-    
-    <div class="container">
-        <!-- WRITEUP -->
-        <section id="writeup">
-            <h1>Chicago Crime Visualization Project</h1>
-            
-            <p>
-            Insert your long write-up here describing the dataset
-            </p>
-            
-            <p>
-            Explain your design choices, the interaction techniques used, and the reasoning
-            behind your visual encodings.
-            </p>
-            
-            <p>
-            Include your development process, time spent, references, and any AI usage here.
-            </p>
-        </section>
 
-        <!-- VISUALIZATION 1 -->
-        <section id="vis1">
-        
-            <h2>Visualization 1: Monthly Crime Counts by Crime Type</h2>
-            
-            <button class="info-toggle">About this visualization</button>
-            
-            <div class="info-box">
-                <p>
-                This visualization shows average monthly crime statistics for three crime types:
-                theft, robbery, and burglary, for incidents reported across the years 2015-2025 in Chicago.
-                Filter crime types using a dropdown menu and hover over points to view
-                details about the average, highest, and lowest crime years.
-                </p>
-            </div>
-            
-            <iframe src="zoey/index.html"></iframe>
-            
-        </section>
-            
-        <!-- VISUALIZATION 2 -->
-        <section id="vis2">
-            
-            <h2>Visualization 2: Chicago Crime Trends Before, During, and After the COVID-19 Pandemic</h2>
-            
-            <button class="info-toggle">About this visualization</button>
-            
-            <div id="infoBox" style="margin-top: 20px;">
-            <p>
-                The purpose of this visualization is to see the trend in four different crime types 
-                (burglary, motor vehicle theft, robbery, and theft) before, during, and after the 
-                COVID-19 pandemic. The data displays the total number of incidents per month, spanning a five-year period: 
-                two years before, one year during, and two years after the pandemic. Use the filters on the left to toggle 
-                specific crime types on and off. Hover over the data points on the graph to view the exact number of incidents for a given period.
-            </p>
-            </div>
+<!-- Navigation -->
+<nav>
+  <ul>
+    <li><a href="#writeup">Project Overview</a></li>
+    <li><a href="#vis1">Visualization 1</a></li>
+    <li><a href="#vis2">Visualization 2</a></li>
+  </ul>
+</nav>
 
-            <div id="layout">
-                <div id="controls">
-                    <h3>Filter Crimes</h3>
-                </div>
-                <div id="main-content">
-                    <div id="vis-container">
-                        <div id="vis"></div>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            
-            <iframe src="erica/index.html"></iframe>
-        
-        </section>
-    </div>
-    
-    <!-- Load D3.js -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="js/script.js"></script>
+<div class="container">
 
-    <script>
-        const toggles = document.querySelectorAll(".info-toggle");
-        
-        toggles.forEach(button => {
-          button.addEventListener("click", () => {
-            const box = button.nextElementSibling;
-            box.classList.toggle("open");
-          });
-        });
-    </script>
+<!-- WRITEUP -->
+<section id="writeup">
+<h1>Chicago Crime Visualization Project</h1>
+
+<p>
+Insert your long write-up here describing the dataset
+</p>
+
+<p>
+Explain your design choices, the interaction techniques used, and the reasoning
+behind your visual encodings.
+</p>
+
+<p>
+Include your development process, time spent, references, and any AI usage here.
+</p>
+
+</section>
+
+<!-- VISUALIZATION 1 -->
+<section id="vis1">
+
+<h2>Visualization 1: Monthly Crime Counts by Crime Type</h2>
+
+<button class="info-toggle">About this visualization</button>
+
+<div class="info-box">
+<p>
+This visualization shows average monthly crime statistics for three crime types:
+theft, robbery, and burglary, for incidents reported across the years 2015-2025 in Chicago.
+Filter crime types using a dropdown menu and hover over points to view
+details about the average, highest, and lowest crime years.
+</p>
+</div>
+
+<iframe src="vis-z/index.html"></iframe>
+
+</section>
+
+<!-- VISUALIZATION 2 -->
+<section id="vis2">
+
+<h2>Visualization 2: Crime Summary</h2>
+
+<button class="info-toggle">About this visualization</button>
+
+<div class="info-box">
+<p>
+This visualization explores crime trends in the two years before,
+one year during the height of, and two years after the COVID-19
+pandemic.
+</p>
+</div>
+
+<iframe src="vis-e/index.html"></iframe>
+
+</section>
+
+</div>
+
+<script>
+
+const toggles = document.querySelectorAll(".info-toggle");
+
+toggles.forEach(button => {
+  button.addEventListener("click", () => {
+    const box = button.nextElementSibling;
+    box.classList.toggle("open");
+  });
+});
+
+</script>
+
 </body>
 </html>
