@@ -24,63 +24,64 @@
 <h1>Chicago Crime Visualization Project</h1>
 
 <p>
-## Write-up
-
-### **Introduction**
-In this assignment, we used the Chicago Crimes (2001–present) dataset, which contains data on the reported incidents of crime (excluding murders) that occurred in Chicago from 2001 to the present; the dataset does not cover the most recent seven days, and the data was extracted from the Chicago Police Department’s Citizen Law Enforcement Analysis and Reporting (CLEAR) system. We chose this dataset to explore trends in Chicago crime data; after skimming through the visualizations on the data portal, we found that there were lots of questions we could explore using the data that was available, and we found that the existing visualizations could help guide us towards meaningful conclusions. For example, after learning that theft was the most commonly reported primary crime, we initially decided to narrow our focus to thefts in particular. In addition, after noticing a sharp decrease in reported crimes during COVID-19 quarantine (a notably sharp decrease even within the context of the general downward trend in the number of reported crimes since 2001), and the eventual increase beginning in 2021, we thought it might be illuminating to explore trends over the years in crime, especially with regards to changes before, during, and after quarantine.
-
----
-
-### **Monthly Crime Counts by Crime Type**
-The visualization “Monthly Crime Counts by Crime Type” uses a subset of the Chicago Crimes data. The goal of this visualization is to represent information on seasonal trends in the number of reported crimes of a selected type. Since the original dataset is extremely large (with over 8 million entries), a subset was chosen to improve efficiency. The chosen subset contains data on three types of crime: theft, robbery, and burglary; these three types of crime are frequent enough that the subset can still reveal meaningful insights, and they are understandable by a general audience. Additionally, the subset was restricted to data from 2015-2025 as those years are more recent.
-
-The independent variable is the month of the year and the dependent variable is the number of incidents over 2015-2025 of a type of crime in a month. The subset was also preprocessed before use to calculate the average incident counts per month, as well as the maximum and minimum counts and the years in which they occurred.
-
-#### **Rationale for design**
-<u>Line chart</u>: It was chosen because the visualization focuses on temporal patterns in the data.
-<u>Individual datapoints</u>: Datapoints are used to represent the maximum, average, and minimum monthly crime counts to give users a better visual representation of the quantity of incidents (including historic extremes) and to serve as an accessible tooltip target.
-<u>Color encoding</u>: This was used to visually separate what the different elements of the chart represent. Red represents the maximum, green the minimum, and black the average monthly crime count. This color scheme was chosen because it is intuitive.
-<u>Dropdown button</u>: It allows the user to dynamically filter the data displayed by the type of crime. This was done instead of showing all types at once to improve readability and prevent overcrowding in the visualization.
-<u>Tooltip</u>: When the user hovers over a datapoint, the tooltip shows the month, crime count, and the year if it is a maximum/minimum point. This allows the user to see details about the precise numerical values without overcrowding the visualization.
-<u>Highlight on hover</u>: When the user hovers over a datapoint, the point increases in size and becomes semi-transparent, thus distinguishing the selected point. This provides visual feedback to the user as they examine the visualization.
-<u>Reference line on hover</u>: When the user hovers over a datapoint, a reference line appears to connect the datapoint to the $y$-axis. This helps the user estimate the value of the point relative to scale.
-<u>Animated transitions</u>: These were added to provide the user with a smooth viewing experience.
-
-
-#### **Alternatives**
-<u>Not showing the month on the tooltip</u>: Since the month is shown on the $x$-axis, including the month in the tooltip was not strictly necessary. However, since some of the datapoints are very far from the $x$-axis, it was more convenient to check the month by using the tooltip than by comparing the datapoint’s position to the $x$-axis.
-
-
----
-
-### **Crime Trends Before, During, and After the COVID-19 Pandemic**
-
-The purpose of this visualization is to explore the impact of the COVID-19 pandemic on criminal activity in Chicago. This data was filtered down to a five year window: two years before the pandemic, one year during the height of the pandemic, and two years post-pandemic. Additionally, it included four types of crimes: burglary, motor vehicle theft, robbery, and theft. The raw data was preprocessed to calculate the monthly averages for each crime type during each period. The dependent variable is the average number of monthly incidents. The independent variables are the type of crime and time period.
-
-#### **Rationale for design**
-<u>Grouped bar chart</u>: This was chosen as it makes it easier to see the shift in crime during each time period.
-<u>Filtering</u>: This allows the user to choose which crime types to focus on, which can help to prevent visual overload.
-<u>Tooltip</u>: Hovering over each of the bars reveals the exact monthly average, which can provide more necessary information to the user.
-<u>Color encoding</u>: The different colors are used consistently across each crime type. This makes it easier for the viewer to track the shift in time period without constantly needing to reference the legend.
-
----
-
-### **References to data resources**
-
-{Needs to be completed}
-
----
-
-### **Overview of development process**
-
-Zoey made the “Monthly Crime Counts by Crime Type” visualization. This included writing a script to preprocess the data (not included in the repository as it was not part of the script for the visualization). AI (ChatGPT) was used to help generate boilerplate templates for and debug the preprocessing script and visualization. The process of creating the visualization took roughly 20 hours, and the animations took the most time, as there were some issues with animating the line in the line chart that took a while to resolve. Zoey also merged branches of the repository and tested the webpage.
-
-Erica made the visualization that displays crime trends before, during, and after the COVID-19 pandemic. This also included a script to preprocess the data. AI (Gemini) was used to generate code and aid in the debugging process. This process took around 5 hours, and the longest part was implementing the filtering, as the debugging process took a while. 
-
-Maxine initially focused on creating a third visualization centered on the relationship between the five districts with the highest number of reported crimes, specifically thefts, and the location of those thefts. The visualization would have been a stacked bar chart, with individual bars representing a district, and subcomponents of each bar representing the location of the crime. Mousing over subcomponents would display their name and percentage breakdown. However, due to time constraints, and the fact that two other visualizations were already planned, Maxine pivoted her focus to editing the write-up, merging Zoey and Erica’s branches of the repository, testing the webpage, and producing the video demo. This entire process is estimated to have taken 10 hours, with the development of the third visualization taking the most amount of time.
-
-Overall, this assignment took approximately 35 hours to complete among three group members.
-
+  <github-md>
+    ## Write-up
+    
+    ### **Introduction**
+    In this assignment, we used the Chicago Crimes (2001–present) dataset, which contains data on the reported incidents of crime (excluding murders) that occurred in Chicago from 2001 to the present; the dataset does not cover the most recent seven days, and the data was extracted from the Chicago Police Department’s Citizen Law Enforcement Analysis and Reporting (CLEAR) system. We chose this dataset to explore trends in Chicago crime data; after skimming through the visualizations on the data portal, we found that there were lots of questions we could explore using the data that was available, and we found that the existing visualizations could help guide us towards meaningful conclusions. For example, after learning that theft was the most commonly reported primary crime, we initially decided to narrow our focus to thefts in particular. In addition, after noticing a sharp decrease in reported crimes during COVID-19 quarantine (a notably sharp decrease even within the context of the general downward trend in the number of reported crimes since 2001), and the eventual increase beginning in 2021, we thought it might be illuminating to explore trends over the years in crime, especially with regards to changes before, during, and after quarantine.
+    
+    ---
+    
+    ### **Monthly Crime Counts by Crime Type**
+    The visualization “Monthly Crime Counts by Crime Type” uses a subset of the Chicago Crimes data. The goal of this visualization is to represent information on seasonal trends in the number of reported crimes of a selected type. Since the original dataset is extremely large (with over 8 million entries), a subset was chosen to improve efficiency. The chosen subset contains data on three types of crime: theft, robbery, and burglary; these three types of crime are frequent enough that the subset can still reveal meaningful insights, and they are understandable by a general audience. Additionally, the subset was restricted to data from 2015-2025 as those years are more recent.
+    
+    The independent variable is the month of the year and the dependent variable is the number of incidents over 2015-2025 of a type of crime in a month. The subset was also preprocessed before use to calculate the average incident counts per month, as well as the maximum and minimum counts and the years in which they occurred.
+    
+    #### **Rationale for design**
+    <u>Line chart</u>: It was chosen because the visualization focuses on temporal patterns in the data.
+    <u>Individual datapoints</u>: Datapoints are used to represent the maximum, average, and minimum monthly crime counts to give users a better visual representation of the quantity of incidents (including historic extremes) and to serve as an accessible tooltip target.
+    <u>Color encoding</u>: This was used to visually separate what the different elements of the chart represent. Red represents the maximum, green the minimum, and black the average monthly crime count. This color scheme was chosen because it is intuitive.
+    <u>Dropdown button</u>: It allows the user to dynamically filter the data displayed by the type of crime. This was done instead of showing all types at once to improve readability and prevent overcrowding in the visualization.
+    <u>Tooltip</u>: When the user hovers over a datapoint, the tooltip shows the month, crime count, and the year if it is a maximum/minimum point. This allows the user to see details about the precise numerical values without overcrowding the visualization.
+    <u>Highlight on hover</u>: When the user hovers over a datapoint, the point increases in size and becomes semi-transparent, thus distinguishing the selected point. This provides visual feedback to the user as they examine the visualization.
+    <u>Reference line on hover</u>: When the user hovers over a datapoint, a reference line appears to connect the datapoint to the $y$-axis. This helps the user estimate the value of the point relative to scale.
+    <u>Animated transitions</u>: These were added to provide the user with a smooth viewing experience.
+    
+    
+    #### **Alternatives**
+    <u>Not showing the month on the tooltip</u>: Since the month is shown on the $x$-axis, including the month in the tooltip was not strictly necessary. However, since some of the datapoints are very far from the $x$-axis, it was more convenient to check the month by using the tooltip than by comparing the datapoint’s position to the $x$-axis.
+    
+    
+    ---
+    
+    ### **Crime Trends Before, During, and After the COVID-19 Pandemic**
+    
+    The purpose of this visualization is to explore the impact of the COVID-19 pandemic on criminal activity in Chicago. This data was filtered down to a five year window: two years before the pandemic, one year during the height of the pandemic, and two years post-pandemic. Additionally, it included four types of crimes: burglary, motor vehicle theft, robbery, and theft. The raw data was preprocessed to calculate the monthly averages for each crime type during each period. The dependent variable is the average number of monthly incidents. The independent variables are the type of crime and time period.
+    
+    #### **Rationale for design**
+    <u>Grouped bar chart</u>: This was chosen as it makes it easier to see the shift in crime during each time period.
+    <u>Filtering</u>: This allows the user to choose which crime types to focus on, which can help to prevent visual overload.
+    <u>Tooltip</u>: Hovering over each of the bars reveals the exact monthly average, which can provide more necessary information to the user.
+    <u>Color encoding</u>: The different colors are used consistently across each crime type. This makes it easier for the viewer to track the shift in time period without constantly needing to reference the legend.
+    
+    ---
+    
+    ### **References to data resources**
+    
+    {Needs to be completed}
+    
+    ---
+    
+    ### **Overview of development process**
+    
+    Zoey made the “Monthly Crime Counts by Crime Type” visualization. This included writing a script to preprocess the data (not included in the repository as it was not part of the script for the visualization). AI (ChatGPT) was used to help generate boilerplate templates for and debug the preprocessing script and visualization. The process of creating the visualization took roughly 20 hours, and the animations took the most time, as there were some issues with animating the line in the line chart that took a while to resolve. Zoey also merged branches of the repository and tested the webpage.
+    
+    Erica made the visualization that displays crime trends before, during, and after the COVID-19 pandemic. This also included a script to preprocess the data. AI (Gemini) was used to generate code and aid in the debugging process. This process took around 5 hours, and the longest part was implementing the filtering, as the debugging process took a while. 
+    
+    Maxine initially focused on creating a third visualization centered on the relationship between the five districts with the highest number of reported crimes, specifically thefts, and the location of those thefts. The visualization would have been a stacked bar chart, with individual bars representing a district, and subcomponents of each bar representing the location of the crime. Mousing over subcomponents would display their name and percentage breakdown. However, due to time constraints, and the fact that two other visualizations were already planned, Maxine pivoted her focus to editing the write-up, merging Zoey and Erica’s branches of the repository, testing the webpage, and producing the video demo. This entire process is estimated to have taken 10 hours, with the development of the third visualization taking the most amount of time.
+    
+    Overall, this assignment took approximately 35 hours to complete among three group members.
+  </github-md>
 </p>
 
 </section>
