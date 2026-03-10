@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Monthly Crime Counts by Crime Type</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container"> <!-- Centers content and sets max width -->
+        <h1>Average Monthly Crime Counts by Crime Type</h1>
+
+        <div class="controls">
+            <!-- Dropdown button -->
+            <select id="crimeSelector" class="variable"></select>
+            <!-- Tooltip -->
+            <div id="tooltip" style="display:none"></div> 
+
+        </div>
+        <div id="vis">
+        </div> <!--  Will hold our visualization (SVG) -->
+
+        <div id="infoBox">
+        <h3>About This Visualization</h3>
+        <p>
+        This visualization shows monthly crime statistics for three crime types:
+        theft, robbery, and burglary. The blue line traces the average number
+        of crimes per month over 2015-2025. Black circles show the average monthly values.
+        The additional points show the highest and lowest monthly counts
+        recorded across the years 2015-2025.
+        Hover over points to see the exact values and the year when the
+        maximum or minimum occurred.
+        </p>
+</div>
+
+    </div>
+    
+    <!-- Load D3.js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/d3-simple-slider"></script>
+    <script src="js/script.js"></script>
+
+    
+</body> 
+</html>

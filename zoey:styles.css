@@ -1,0 +1,79 @@
+/* Reset default styles */
+* {
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+}
+
+/* Container styling for layout */
+.container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    font-family: Arial, sans-serif;
+}
+
+
+#vis {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Style the axes */
+.x-axis path,
+.y-axis path,
+.x-axis line,
+.y-axis line {
+    stroke: #333;
+    shape-rendering: crispEdges;
+}
+
+.x-axis text,
+.y-axis text {
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+}
+
+.axis-label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#crimeSelector {
+    padding-left: 12px;   /* Distance of text from left */
+    padding-right: 36px;  /* Space for arrow */
+    height: 36px;
+
+    background-color: rgb(48, 93, 176);
+    color: #ffffff;
+
+    border: 1px solid #ccc;
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    appearance: none;          /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='10' viewBox='0 0 20 20' width='10' xmlns='http://www.w3.org/2000/svg'><path d='M5 7l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 12px center; /* arrow margin from right */
+}
+
+#crimeSelector option {
+    background-color: rgb(234, 171, 84);
+    color: white;
+}
+
+#crimeSelector:hover {
+    border-color: #333;
+}
+
+#tooltip {
+    position: absolute; /* So we can move it with the cursor */
+    padding: 10px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    pointer-events: none; /* Prevent tooltip from interfering with mouse events */
+    font-size: 12px;
+}
