@@ -4,10 +4,8 @@ const height = 500 - margin.top - margin.bottom;
 
 const svg = d3.select('#vis')
     .append('svg')
-    .attr('viewBox', `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
-    .attr('width', '100%')
-    .attr('height', '100%')       // make it fill the container
-    .style('display', 'block')    // remove unwanted inline gaps
+    .attr('width', width + margin.left + margin.right)
+    .attr('height', height + margin.top + margin.bottom)
     .append('g')
     .attr('transform', `translate(${margin.left},${margin.top})`);
 
@@ -124,7 +122,7 @@ d3.csv("summary_crime.csv").then(data => {
 });
 
 function renderLegend(svg, width, color, periods) {
-    const legend = svg.append("g").attr("transform", `translate(${width * 0.9}, 0)`);
+    const legend = svg.append("g").attr("transform", `translate(${width + 20}, 0)`);
     periods.forEach((p, i) => {
         const g = legend.append("g").attr("transform", `translate(0,${i * 25})`);
         g.append("rect").attr("width", 18).attr("height", 18).attr("fill", color(p));
