@@ -74,8 +74,9 @@ iframe{
 
 footer {
     text-align: center;
-    margin-top: 20px;
-    padding: 5px;
-    background-color: darkgrey;
+    font-size: 14px;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: #222;
     color: white;
 }
