@@ -36,7 +36,7 @@ const tooltip = d3.select("body").append("div")
     .style("box-shadow", "0px 0px 10px rgba(0,0,0,0.1)")
     .style("font-family", "sans-serif");
 
-d3.csv("data/summary_crime.csv").then(data => {
+d3.csv("summary_crime.csv").then(data => {
     data.forEach(d => {
         d.before = +d.before;
         d.during = +d.during;
