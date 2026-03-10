@@ -43,7 +43,7 @@ nav ul li a:hover {
 /* Sections */
 
 section{
-    margin-top:60px;
+    margin-top:50px;
 }
 
 /* Iframes */
@@ -82,8 +82,9 @@ iframe{
 footer {
     text-align: center;
     font-size: 14px;
+    font-style: italic;
     margin-top: 50px;
-    padding: 10px;
+    padding: 5px;
     background-color: #222;
     color: white;
 }
