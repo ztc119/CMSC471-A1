@@ -142,7 +142,7 @@ function updateAxes() {
         .attr("x",-height/2)
         .attr("y", -margin.left + 28)
         .attr("text-anchor","middle")
-        .text("Crime Count")
+        .text("Monthly Crime Count")
         .attr('class', 'labels');
 
 }
