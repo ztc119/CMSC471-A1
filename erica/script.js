@@ -5,9 +5,9 @@ const height = 500 - margin.top - margin.bottom;
 const svg = d3.select('#vis')
     .append('svg')
     .attr('viewBox', `0 0 ${width + margin.left + margin.right} ${height + margin.top + margin.bottom}`)
-    .attr('width', '100%')          // Makes it scale horizontally
-    .attr('height', '100%')         // Optional, ensures proportional scaling
-    .attr('preserveAspectRatio', 'xMidYMid meet') // scales while keeping aspect ratio
+    .attr('width', '100%')
+    .attr('height', '100%')       // make it fill the container
+    .style('display', 'block')    // remove unwanted inline gaps
     .append('g')
     .attr('transform', `translate(${margin.left},${margin.top})`);
 
