@@ -73,8 +73,9 @@ iframe{
 }
 
 footer {
-    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
     padding: 5px;
-    background-color: lightgrey;
+    background-color: darkgrey;
     color: white;
 }
